@@ -1,12 +1,12 @@
+package Tests;
+
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.lessThan;
 
 public class C11_Post_JsonPathlleBodyTesti {
 

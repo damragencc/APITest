@@ -1,9 +1,10 @@
+package Tests;
+
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.junit.Test;
-import org.junit.Assert;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -62,6 +63,11 @@ public class C14_Post_ExpectedDataVeJsonPathlleAssertion {
         obj1.put("bookingdates",rezervasyon);
         obj1.put("additionalneeds","wi-fi");
 
+        System.out.println(obj1);
+
+
+
+
 
         //2-expected Data olustur
 
@@ -71,7 +77,7 @@ public class C14_Post_ExpectedDataVeJsonPathlleAssertion {
 
         Response response=given().contentType(ContentType.JSON).when().body(obj1.toString()).post(url);
 
-        response.prettyPrint();
+          response.prettyPrint();
 
         JsonPath responseJsonPath=response.jsonPath();
         // ilk yazilan expected ====> olusturdugumuz JSonObject : expectedData
